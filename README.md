@@ -20,7 +20,7 @@ To perform a desired operation the utility takes parameters at execution.
 To see the accepted parameter options simply run the `zips.rb` script with a help flag.
 
 ```bash
-$ ruby zips.rb -h
+$ ./zips.rb -h
 Usage: zips.rb [options]
 
   Available operations:
@@ -36,7 +36,7 @@ Usage: zips.rb [options]
 Select an operation to perform by passing the operation parameter `-o, --operation NUMBER` to the script.
 
 ```bash
-$ ruby zips.rb -o 1
+$ ./zips.rb -o 1
 [
   {
     "_id": "NY",
@@ -72,7 +72,7 @@ $ ruby zips.rb -o 1
 Unlike the first operation, the second and third require usage of the state parameter `-s, --state STATE`. The `STATE` value should be the two character state code. So if we wanted to know the average city population size in New Mexico we'd execute the script like:
 
 ```bash
-$ ruby zips.rb -o 2 -s NM
+$ ./zips.rb -o 2 -s NM
 {
   "_id": "NM",
   "avgCityPop": 5489
@@ -82,7 +82,7 @@ $ ruby zips.rb -o 2 -s NM
 Similarly for finding the cities in New Mexico with the largest and smallest populations.
 
 ```bash
-$ ruby zips.rb -o 3 -s NM
+$ ./zips.rb -o 3 -s NM
 {
   "state": "NM",
   "biggestCity": {
