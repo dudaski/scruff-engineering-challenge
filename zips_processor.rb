@@ -20,7 +20,7 @@ class ZipsProcessor
   # Return hash where key is state abbreviation and value is array of cities in
   # that state
   def cities_by_state
-    cities.group_by { |city| get_city_state city }
+    @cities_by_state ||= cities.group_by { |city| get_city_state city }
   end
 
   # Returns hash where key is state abbreviation and value is population
